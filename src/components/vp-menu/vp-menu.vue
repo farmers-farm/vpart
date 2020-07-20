@@ -3,24 +3,23 @@
  * @Description: 
  * @Date: 2020-07-19 19:28:58
  * @LastEditors: wupup
- * @LastEditTime: 2020-07-19 19:59:38
+ * @LastEditTime: 2020-07-20 18:41:29
  * @FilePath: \vpart\src\components\vp-menu\vp-menu.vue
 -->
 <template>
   <div class="vp-menu" :style="wrapperStyle">
     <ul>
-      <li>
-        <router-link to="/">Home</router-link>
-      </li>
-      <li>
-        <router-link to="/about">About</router-link>
+      <li class="route-item" v-for="route in routes" :key="route.path">
+        <router-link class="route-link" :to="route.path">{{
+          route.name
+        }}</router-link>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import router from "@/router";
+import { routes } from "@/router";
 
 export default {
   name: "VpMenu",
@@ -30,6 +29,12 @@ export default {
       type: String,
       default: "left"
     }
+  },
+
+  data() {
+    return {
+      routes
+    };
   },
 
   computed: {
@@ -60,12 +65,8 @@ export default {
     }
   },
 
-  data() {
-    return {};
-  },
-
   created() {
-    console.log("route", router);
+    console.log("route", routes);
   },
 
   methods: {}
@@ -77,5 +78,17 @@ export default {
   position: fixed;
   background-color: #000;
   color: #fff;
+
+  .route-item {
+    margin-bottom: 1px;
+    background-color: royalblue;
+  }
+
+  .route-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 16px 20px;
+  }
 }
 </style>
