@@ -3,7 +3,7 @@
  * @Description: 
  * @Date: 2020-08-06 17:51:47
  * @LastEditors: wupup
- * @LastEditTime: 2020-08-06 20:29:05
+ * @LastEditTime: 2020-08-07 11:41:53
  * @FilePath: \vpart\src\components\vp-loading\vp-loading.vue
 -->
 <template>
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    <div class="loading-text" :style="{ color: textColor }">Loading...</div>
+    <div class="loading-text">Loading...</div>
   </div>
 </template>
 
@@ -35,10 +35,6 @@ export default {
     color: {
       type: String,
       defaullt: "#7d5400"
-    },
-    textColor: {
-      type: String,
-      default: "#333"
     }
   },
 
@@ -145,6 +141,7 @@ $sunColor: #7d5400;
 .loading-text {
   text-align: center;
   font-size: 16px;
+  color: var(--color);
   animation: text 3s linear infinite;
 }
 
