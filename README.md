@@ -11,6 +11,6 @@
 ### vue compinents libs
 
 <p>
-  <a href="https://vpart.netlify.app/">主页</a>
+  主页:<a href="https://vpart.netlify.app/">https://vpart.netlify.app/</a>
 </p>
 
