@@ -10,9 +10,9 @@
   <div class="vp-menu" :style="wrapperStyle">
     <ul>
       <li class="route-item" v-for="route in routes" :key="route.path">
-        <router-link class="route-link" :to="route.path">{{
-          route.name
-        }}</router-link>
+        <router-link class="route-link" :to="route.path">
+          {{ route.name }}
+        </router-link>
       </li>
     </ul>
   </div>
