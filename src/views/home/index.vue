@@ -9,7 +9,7 @@
 <template>
   <div class="home">
     <div class="img-wrapper">
-      <img alt="Vue logo" src="../assets/logo.jpg" />
+      <img alt="Vue logo" src="../../assets/logo.jpg" />
       <div class="custom-shape-divider-bottom-1607649554">
         <svg
           data-name="Layer 1"
