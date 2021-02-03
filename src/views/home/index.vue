@@ -31,10 +31,18 @@
 <script>
 import VpIcon from "@/components/vp-icon/vp-icon.vue";
 
+import { getHomeData } from "@/api/home";
+
 export default {
   name: "Home",
   components: {
     VpIcon
+  },
+
+  created() {
+    getHomeData().then(res => {
+      console.log("🚩 🥕 getHomeData 🥕 res", res);
+    });
   }
 };
 </script>
